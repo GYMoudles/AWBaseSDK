@@ -38,7 +38,7 @@
 
 /* Begin PBXFileReference section */
 		182C5F7E3BFB8A912E7DE0E8 /* Pods-AWBaseSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWBaseSDK_Tests.debug.xcconfig"; path = "Target Support Files/Pods-AWBaseSDK_Tests/Pods-AWBaseSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		3EDFD69C8F49CB7D388FF5A9 /* AWBaseSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = AWBaseSDK.podspec; path = ../AWBaseSDK.podspec; sourceTree = "<group>"; };
+		3EDFD69C8F49CB7D388FF5A9 /* AWBaseSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AWBaseSDK.podspec; path = ../AWBaseSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		6003F58A195388D20070C39A /* AWBaseSDK_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AWBaseSDK_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,8 +63,8 @@
 		82D46CE85BF0B765FF09DDC0 /* Pods_AWBaseSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWBaseSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A924410983A392918C5AB32F /* Pods_AWBaseSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AWBaseSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C3E4790D60116E53B980A25E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		CAE789607A8CA9C5EFD340AA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		C3E4790D60116E53B980A25E /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		CAE789607A8CA9C5EFD340AA /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CB2F4EF31B8277EF91F82750 /* Pods-AWBaseSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWBaseSDK_Tests.release.xcconfig"; path = "Target Support Files/Pods-AWBaseSDK_Tests/Pods-AWBaseSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		E3C90C916D398CAA52B6203D /* Pods-AWBaseSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AWBaseSDK_Example.debug.xcconfig"; path = "Target Support Files/Pods-AWBaseSDK_Example/Pods-AWBaseSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -103,7 +103,6 @@
 				182C5F7E3BFB8A912E7DE0E8 /* Pods-AWBaseSDK_Tests.debug.xcconfig */,
 				CB2F4EF31B8277EF91F82750 /* Pods-AWBaseSDK_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -259,6 +258,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -371,11 +371,15 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-AWBaseSDK_Example/Pods-AWBaseSDK_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/AWBaseSDK/AWBaseSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/XMNetworking/XMNetworking.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWBaseSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XMNetworking.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

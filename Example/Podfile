@@ -4,7 +4,11 @@ platform :ios, '8.0'
 
 target 'AWBaseSDK_Example' do
   pod 'AWBaseSDK', :path => '../'
-
+  pod 'AFNetworking'
+  pod 'XMNetworking'
+  
+  
+  
   target 'AWBaseSDK_Tests' do
     inherit! :search_paths
 
