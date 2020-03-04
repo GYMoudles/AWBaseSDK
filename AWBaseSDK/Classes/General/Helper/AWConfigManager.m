@@ -54,6 +54,10 @@ static NSString *_kAWConfigManagerPathKey = @"kAWConfigManagerPathKey";
         
 #endif
         
+#if defined kConfigEnv_UAT
+        _baseURL = @"https://uatpxapi.yundasys.com:443";
+#endif
+        
 #if defined kConfigEnv_RELEASE
         _baseURL = @"https://op.51huochedai.com";
 #endif
@@ -222,11 +226,13 @@ static AWConfigManager *_instance;
     }];
     
     // 对 app.kangzubin.com 域名下的接口做 SSL Pinning 验证
-    [XMCenter addSSLPinningURL:@"https://app.kangzubin.com"];
+    //    [XMCenter addSSLPinningURL:@"https://app.kangzubin.com"];
     
     // 请求预处理插件
     [XMCenter setRequestProcessBlock:^(XMRequest *request) {
         kStrongSelf(self);
+        
+        request.requestSerializerType = kXMRequestSerializerJSON;
         
         // 在这里对所有的请求进行统一的预处理，如业务数据加密等
         if (self.apiVersion.length > 0) {

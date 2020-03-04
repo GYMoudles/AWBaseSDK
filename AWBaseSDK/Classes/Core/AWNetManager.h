@@ -20,7 +20,7 @@ typedef void (^AWCancelBlock)(id _Nullable request);
 @interface AWNetManager : NSObject
 
 
-+ (void)setupConfig:(void(^)(XMConfig *config))block;
+
 
 + (NSString *)get:(NSDictionary *)param onSuccess:(AWSuccessBlock)success onFailure:(AWFailureBlock)failure;
 
