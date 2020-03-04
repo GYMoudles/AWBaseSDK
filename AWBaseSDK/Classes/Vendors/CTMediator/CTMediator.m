@@ -82,7 +82,7 @@ NSString * const kCTMediatorParamsKeySwiftTargetModuleName = @"kCTMediatorParams
     if (swiftModuleName.length > 0) {
         targetClassString = [NSString stringWithFormat:@"%@.%@", swiftModuleName, targetName];
     } else {
-        targetClassString = targetName;
+        targetClassString = [NSString stringWithFormat:@"%@", targetName];
     }
     NSObject *target = self.cachedTarget[targetClassString];
     if (target == nil) {
@@ -91,7 +91,7 @@ NSString * const kCTMediatorParamsKeySwiftTargetModuleName = @"kCTMediatorParams
     }
 
     // generate action
-    NSString *actionString = actionName;
+    NSString *actionString = [NSString stringWithFormat:@"%@:", actionName];
     SEL action = NSSelectorFromString(actionString);
     
     if (target == nil) {
@@ -125,8 +125,8 @@ NSString * const kCTMediatorParamsKeySwiftTargetModuleName = @"kCTMediatorParams
     if (targetName == nil) {
         return;
     }
-    
-    [self.cachedTarget removeObjectForKey:targetName];
+    NSString *targetClassString = [NSString stringWithFormat:@"%@", targetName];
+    [self.cachedTarget removeObjectForKey:targetClassString];
 }
 
 #pragma mark - private methods
