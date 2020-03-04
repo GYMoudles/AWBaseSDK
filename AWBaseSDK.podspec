@@ -110,6 +110,10 @@ AwesomTemplate 模板项目 为了支持模块化，做成Base模块
       ss.subspec 'YYKit' do |sss|
           sss.source_files = rootCodeDir + '/Vendors/YYKit/**/*'
       end
+      
+      ss.subspec 'CTMediator' do |sss|
+          sss.source_files = rootCodeDir + '/Vendors/CTMediator/*'
+      end
      
   end
   
@@ -135,5 +139,4 @@ AwesomTemplate 模板项目 为了支持模块化，做成Base模块
   s.dependency 'RJBadgeKit'
   s.dependency 'RTRootNavigationController'
   s.dependency 'SDWebImage'
-  s.dependency 'CTMediator'
 end

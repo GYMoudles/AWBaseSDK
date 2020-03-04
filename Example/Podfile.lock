@@ -20,7 +20,6 @@ PODS:
     - AWBaseSDK/General (= 0.1.0)
     - AWBaseSDK/Model (= 0.1.0)
     - AWBaseSDK/Vendors (= 0.1.0)
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -32,7 +31,6 @@ PODS:
     - XMNetworking
   - AWBaseSDK/Core (0.1.0):
     - AFNetworking
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -48,7 +46,6 @@ PODS:
     - AWBaseSDK/General/Category (= 0.1.0)
     - AWBaseSDK/General/Helper (= 0.1.0)
     - AWBaseSDK/General/Marco (= 0.1.0)
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -60,7 +57,6 @@ PODS:
     - XMNetworking
   - AWBaseSDK/General/Base (0.1.0):
     - AFNetworking
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -73,7 +69,6 @@ PODS:
   - AWBaseSDK/General/Category (0.1.0):
     - AFNetworking
     - AWBaseSDK/General/Category/NSDate (= 0.1.0)
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -85,7 +80,6 @@ PODS:
     - XMNetworking
   - AWBaseSDK/General/Category/NSDate (0.1.0):
     - AFNetworking
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -97,7 +91,6 @@ PODS:
     - XMNetworking
   - AWBaseSDK/General/Helper (0.1.0):
     - AFNetworking
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -109,7 +102,6 @@ PODS:
     - XMNetworking
   - AWBaseSDK/General/Marco (0.1.0):
     - AFNetworking
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -121,7 +113,6 @@ PODS:
     - XMNetworking
   - AWBaseSDK/Model (0.1.0):
     - AFNetworking
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -134,13 +125,13 @@ PODS:
   - AWBaseSDK/Vendors (0.1.0):
     - AFNetworking
     - AWBaseSDK/Vendors/AvoidCrash (= 0.1.0)
+    - AWBaseSDK/Vendors/CTMediator (= 0.1.0)
     - AWBaseSDK/Vendors/MBProgressHUD (= 0.1.0)
     - AWBaseSDK/Vendors/QMUIKit_Lite (= 0.1.0)
     - AWBaseSDK/Vendors/Reachability (= 0.1.0)
     - AWBaseSDK/Vendors/TOSearchBar (= 0.1.0)
     - AWBaseSDK/Vendors/XCFileManager (= 0.1.0)
     - AWBaseSDK/Vendors/YYKit (= 0.1.0)
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -153,7 +144,6 @@ PODS:
   - AWBaseSDK/Vendors/AvoidCrash (0.1.0):
     - AFNetworking
     - AWBaseSDK/Vendors/AvoidCrash/no-arc (= 0.1.0)
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -165,7 +155,17 @@ PODS:
     - XMNetworking
   - AWBaseSDK/Vendors/AvoidCrash/no-arc (0.1.0):
     - AFNetworking
-    - CTMediator
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/Vendors/CTMediator (0.1.0):
+    - AFNetworking
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -177,7 +177,6 @@ PODS:
     - XMNetworking
   - AWBaseSDK/Vendors/MBProgressHUD (0.1.0):
     - AFNetworking
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -189,7 +188,6 @@ PODS:
     - XMNetworking
   - AWBaseSDK/Vendors/QMUIKit_Lite (0.1.0):
     - AFNetworking
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -201,7 +199,6 @@ PODS:
     - XMNetworking
   - AWBaseSDK/Vendors/Reachability (0.1.0):
     - AFNetworking
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -213,7 +210,6 @@ PODS:
     - XMNetworking
   - AWBaseSDK/Vendors/TOSearchBar (0.1.0):
     - AFNetworking
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -225,7 +221,6 @@ PODS:
     - XMNetworking
   - AWBaseSDK/Vendors/XCFileManager (0.1.0):
     - AFNetworking
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -237,7 +232,6 @@ PODS:
     - XMNetworking
   - AWBaseSDK/Vendors/YYKit (0.1.0):
     - AFNetworking
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -247,7 +241,6 @@ PODS:
     - RTRootNavigationController
     - SDWebImage
     - XMNetworking
-  - CTMediator (26)
   - Expecta (1.0.6)
   - "Expecta+Snapshots (3.1.1)":
     - Expecta (~> 1.0)
@@ -284,7 +277,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
-    - CTMediator
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -306,8 +298,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  AWBaseSDK: 9958a63c2b72ebc2ff692348d17fe76da2004420
-  CTMediator: 22d631107cb27f2c792c766e50e580ef35530c36
+  AWBaseSDK: b5ec495aa3bbf257c32da0937edfe608d2809cfb
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   "Expecta+Snapshots": dcff217eef506dabd6dfdc7864ea2da321fafbb8
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
