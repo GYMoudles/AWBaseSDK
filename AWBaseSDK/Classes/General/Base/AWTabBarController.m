@@ -11,9 +11,6 @@
 #import "AWUserManager.h"
 
 
-//#import "DemoViewController0.h"
-//#import "DemoViewController1.h"
-//#import "DemoViewController2.h"
 
 @interface AWTabBarController ()<UITabBarControllerDelegate>
 
@@ -24,14 +21,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-//    DemoViewController0 *vc0 = [DemoViewController0 new];
-//    [self addChildVc:vc0 title:@"首页" image:@"tabbar_0" selectedImage:@"tabbar_0hl"];
-//    
-//    DemoViewController1 *vc1 = [DemoViewController1 new];
-//    [self addChildVc:vc1 title:@"更多" image:@"tabbar_1" selectedImage:@"tabbar_1hl"];
-//    
-//    DemoViewController2 *vc2 = [DemoViewController2 new];
-//    [self addChildVc:vc2 title:@"我的" image:@"tabbar_2" selectedImage:@"tabbar_2hl"];
+    UIViewController *vc0 = [[CTMediator sharedInstance] awPerformTarget:@"1" action:@"" params:nil shouldCacheTarget:NO];
+    [self addChildVc:vc0 title:@"驾驶舱" image:@"tabbar_0" selectedImage:@"tabbar_0hl"];
+    
+    UIViewController *vc1 = [[CTMediator sharedInstance] awPerformTarget:@"1" action:@"" params:nil shouldCacheTarget:NO];
+    [self addChildVc:vc1 title:@"指标池" image:@"tabbar_1" selectedImage:@"tabbar_1hl"];
+    
+    UIViewController *vc2 = [[CTMediator sharedInstance] awPerformTarget:@"1" action:@"" params:nil shouldCacheTarget:NO];
+    [self addChildVc:vc2 title:@"我的" image:@"tabbar_2" selectedImage:@"tabbar_2hl"];
     
     
     self.delegate = self;
@@ -41,6 +38,9 @@
 //    self.tabBar.backgroundImage = [UIImage jk_imageWithColor:[UIColor whiteColor]];
     
     //    [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0, -2)];
+    
+    
+    [[AppTools sharedAppTools] forceLoginIfNeeded:NO];
 }
 
 

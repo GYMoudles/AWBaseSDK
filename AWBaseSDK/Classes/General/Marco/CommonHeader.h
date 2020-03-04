@@ -144,6 +144,7 @@ shouldPrevent = NO; \
 }); \
 
 // 常用头文件
+#import "CTMediator+AWMediatorImplementor.h"
 #import <Masonry/Masonry.h>
 #import <MJRefresh/MJRefresh.h>
 #import <MJExtension/MJExtension.h>

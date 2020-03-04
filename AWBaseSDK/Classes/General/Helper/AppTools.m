@@ -196,9 +196,9 @@ singleton_implementation(AppTools);
 - (AWRootNavigationController *)loginNav
 {
     if (nil == _loginNav) {
-        //        LoginViewController *loginVC = [LoginViewController new];
-        //        _loginNav = [[AWRootNavigationController alloc]initWithRootViewController:loginVC];
-        //        loginVC.navigationController.navigationBarHidden = YES;
+        UIViewController *loginVC = [[CTMediator sharedInstance] awPerformTarget:@"YCLogin" action:@"new" params:nil shouldCacheTarget:NO];
+        _loginNav = [[AWRootNavigationController alloc]initWithRootViewController:loginVC];
+        loginVC.navigationController.navigationBarHidden = YES;
         
     }
     return _loginNav;
@@ -363,7 +363,7 @@ singleton_implementation(AppTools);
 - (void)dealwithCrashMessage:(NSNotification *)note {
     //注意:所有的信息都在userInfo中
     //你可以在这里收集相应的崩溃信息进行相应的处理(比如传到自己服务器)
-//    NSLog(@"%@",note.userInfo);
+    //    NSLog(@"%@",note.userInfo);
 }
 
 
