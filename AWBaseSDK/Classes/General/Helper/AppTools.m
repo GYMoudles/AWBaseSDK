@@ -196,7 +196,7 @@ singleton_implementation(AppTools);
 - (AWRootNavigationController *)loginNav
 {
     if (nil == _loginNav) {
-        UIViewController *loginVC = [[CTMediator sharedInstance] awPerformTarget:@"YCLoginViewController" action:@"new" params:nil shouldCacheTarget:NO];
+        UIViewController *loginVC = [[CTMediator sharedInstance] awPerformTarget:@"YCLoginViewController" action:@"targetVC" params:nil shouldCacheTarget:NO];
         _loginNav = [[AWRootNavigationController alloc]initWithRootViewController:loginVC];
         loginVC.navigationController.navigationBarHidden = YES;
         
