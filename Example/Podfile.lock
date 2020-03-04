@@ -277,6 +277,9 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - Expecta
+    - "Expecta+Snapshots"
+    - FBSnapshotTestCase
     - GYIntroductionView
     - IQKeyboardManager
     - Masonry
@@ -285,12 +288,8 @@ SPEC REPOS:
     - RJBadgeKit
     - RTRootNavigationController
     - SDWebImage
-    - XMNetworking
-  trunk:
-    - Expecta
-    - "Expecta+Snapshots"
-    - FBSnapshotTestCase
     - Specta
+    - XMNetworking
 
 EXTERNAL SOURCES:
   AWBaseSDK:
