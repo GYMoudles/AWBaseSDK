@@ -1,0 +1,23 @@
+//
+//  CTMediator+AWMediatorImplementor.m
+//  Pods
+//
+//  Created by zgy on 2020/3/4.
+//
+
+#import "CTMediator+AWMediatorImplementor.h"
+
+@implementation CTMediator (AWMediatorImplementor)
+
+- (UIViewController *)awPerformTarget:(NSString *)targetName action:(NSString * _Nullable)actionName params:(NSDictionary * _Nullable)params shouldCacheTarget:(BOOL)shouldCacheTarget
+{
+    UIViewController *vc = [self performTarget:targetName action:actionName params:params shouldCacheTarget:shouldCacheTarget];
+    if ([vc isKindOfClass:[UIViewController class]]) {
+        return vc;
+    }else {
+        NSLog(@"未找到对应VC，可以显示404");
+        return [UIViewController new];
+    }
+    
+}
+@end

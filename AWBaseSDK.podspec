@@ -135,4 +135,5 @@ AwesomTemplate 模板项目 为了支持模块化，做成Base模块
   s.dependency 'RJBadgeKit'
   s.dependency 'RTRootNavigationController'
   s.dependency 'SDWebImage'
+  s.dependency 'CTMediator'
 end
