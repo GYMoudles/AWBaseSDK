@@ -144,6 +144,12 @@ shouldPrevent = NO; \
 }); \
 
 // 常用头文件
+#import <Masonry/Masonry.h>
+#import <MJRefresh/MJRefresh.h>
+#import <MJExtension/MJExtension.h>
+#import <XMNetworking/XMNetworking.h>
+
+
 #import "UIView+Extension.h"
 #import "MBProgressHUD+MJ.h"
 #import "YYCache.h"
@@ -158,11 +164,7 @@ shouldPrevent = NO; \
 #import "BaseResonseModel.h"
 #import "AWBaseViewController.h"
 
-#import <Masonry/Masonry.h>
-#import <MJRefresh/MJRefresh.h>
-#import <MJExtension/MJExtension.h>
-#import <XMNetworking/XMNetworking.h>
-#import <RTRootNavigationController/RTRootNavigationController.h>
+
 
 
 
