@@ -7,7 +7,7 @@
 //
 
 #import "AWViewController.h"
-#import <AWBaseSDK/AWNetManager.h>
+#import <AWNetManager.h>
 
 @interface AWViewController ()
 

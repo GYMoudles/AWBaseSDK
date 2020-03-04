@@ -17,9 +17,217 @@ PODS:
   - AWBaseSDK (0.1.0):
     - AFNetworking
     - AWBaseSDK/Core (= 0.1.0)
+    - AWBaseSDK/General (= 0.1.0)
+    - AWBaseSDK/Model (= 0.1.0)
+    - AWBaseSDK/Vendors (= 0.1.0)
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
     - XMNetworking
   - AWBaseSDK/Core (0.1.0):
     - AFNetworking
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/General (0.1.0):
+    - AFNetworking
+    - AWBaseSDK/General/Base (= 0.1.0)
+    - AWBaseSDK/General/Category (= 0.1.0)
+    - AWBaseSDK/General/Helper (= 0.1.0)
+    - AWBaseSDK/General/Marco (= 0.1.0)
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/General/Base (0.1.0):
+    - AFNetworking
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/General/Category (0.1.0):
+    - AFNetworking
+    - AWBaseSDK/General/Category/NSDate (= 0.1.0)
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/General/Category/NSDate (0.1.0):
+    - AFNetworking
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/General/Helper (0.1.0):
+    - AFNetworking
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/General/Marco (0.1.0):
+    - AFNetworking
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/Model (0.1.0):
+    - AFNetworking
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/Vendors (0.1.0):
+    - AFNetworking
+    - AWBaseSDK/Vendors/AvoidCrash (= 0.1.0)
+    - AWBaseSDK/Vendors/MBProgressHUD (= 0.1.0)
+    - AWBaseSDK/Vendors/QMUIKit_Lite (= 0.1.0)
+    - AWBaseSDK/Vendors/Reachability (= 0.1.0)
+    - AWBaseSDK/Vendors/TOSearchBar (= 0.1.0)
+    - AWBaseSDK/Vendors/XCFileManager (= 0.1.0)
+    - AWBaseSDK/Vendors/YYKit (= 0.1.0)
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/Vendors/AvoidCrash (0.1.0):
+    - AFNetworking
+    - AWBaseSDK/Vendors/AvoidCrash/no-arc (= 0.1.0)
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/Vendors/AvoidCrash/no-arc (0.1.0):
+    - AFNetworking
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/Vendors/MBProgressHUD (0.1.0):
+    - AFNetworking
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/Vendors/QMUIKit_Lite (0.1.0):
+    - AFNetworking
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/Vendors/Reachability (0.1.0):
+    - AFNetworking
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/Vendors/TOSearchBar (0.1.0):
+    - AFNetworking
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/Vendors/XCFileManager (0.1.0):
+    - AFNetworking
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  - AWBaseSDK/Vendors/YYKit (0.1.0):
+    - AFNetworking
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
     - XMNetworking
   - Expecta (1.0.6)
   - "Expecta+Snapshots (3.1.1)":
@@ -31,27 +239,46 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
+  - GYIntroductionView (1.0.1)
+  - IQKeyboardManager (6.5.5)
+  - Masonry (1.1.0)
+  - MJExtension (3.2.1)
+  - MJRefresh (3.3.1)
+  - RJBadgeKit (0.2.5)
+  - RTRootNavigationController (0.7.2):
+    - RTRootNavigationController/Core (= 0.7.2)
+  - RTRootNavigationController/Core (0.7.2)
+  - SDWebImage (5.5.2):
+    - SDWebImage/Core (= 5.5.2)
+  - SDWebImage/Core (5.5.2)
   - Specta (1.0.7)
   - XMNetworking (1.1.0):
     - AFNetworking (~> 3.0)
 
 DEPENDENCIES:
-  - AFNetworking
   - AWBaseSDK (from `../`)
   - Expecta
   - "Expecta+Snapshots"
   - FBSnapshotTestCase
   - Specta
-  - XMNetworking
 
 SPEC REPOS:
-  trunk:
+  https://github.com/CocoaPods/Specs.git:
     - AFNetworking
+    - GYIntroductionView
+    - IQKeyboardManager
+    - Masonry
+    - MJExtension
+    - MJRefresh
+    - RJBadgeKit
+    - RTRootNavigationController
+    - SDWebImage
+    - XMNetworking
+  trunk:
     - Expecta
     - "Expecta+Snapshots"
     - FBSnapshotTestCase
     - Specta
-    - XMNetworking
 
 EXTERNAL SOURCES:
   AWBaseSDK:
@@ -59,13 +286,21 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  AWBaseSDK: 265adcbbaf7efc55918d34d1206e2fb9b391a982
+  AWBaseSDK: 317bd01e1ff89974a08de313c3e753aa390b7c8a
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   "Expecta+Snapshots": dcff217eef506dabd6dfdc7864ea2da321fafbb8
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  GYIntroductionView: 7f7cdbcbdb711af891e2fa5e048029d87d83f955
+  IQKeyboardManager: 3a8b9e603f8b0eeaf5f096a1f2b2cfcf121992ef
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
+  MJRefresh: eeda70fbf0ad277f3178cef1cd0c3532591d6237
+  RJBadgeKit: 5536a6506ead83f0ef644397a244de42ce3e84f7
+  RTRootNavigationController: 8344c2352d6d40fa370d0366efae2c84a945213f
+  SDWebImage: 4d5c027c935438f341ed33dbac53ff9f479922ca
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
   XMNetworking: 7160cc06f504f325eec515a1e687ee1aa89bc462
 
-PODFILE CHECKSUM: 98260c50268f2546f48e52f3439abdfcf74080c1
+PODFILE CHECKSUM: 0c676d27bca7d1570af0eff597fe1296c51e290d
 
 COCOAPODS: 1.9.0

@@ -6,10 +6,11 @@
 # To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
 #
 
+rootCodeDir = 'AWBaseSDK/Classes'
 Pod::Spec.new do |s|
   s.name             = 'AWBaseSDK'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of AWBaseSDK.'
+  s.summary          = 'AwesomTemplate 模板项目，支持模块化'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +19,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+AwesomTemplate 模板项目 为了支持模块化，做成Base模块
                        DESC
 
   s.homepage         = 'https://github.com/GYMoudles/AWBaseSDK'
@@ -29,11 +30,93 @@ TODO: Add long description of the pod here.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
+  
+  s.prefix_header_contents = <<-EOS
+   #ifdef __OBJC__
+   #import <UIKit/UIKit.h>
+   #import "CommonHeader.h"
+   #else
+   #ifndef FOUNDATION_EXPORT
+   #if defined(__cplusplus)
+   #define FOUNDATION_EXPORT extern "C"
+   #else
+   #define FOUNDATION_EXPORT extern
+   #endif
+   #endif
+   #endif
+  EOS
+
+
 
   # s.source_files = 'AWBaseSDK/Classes/**/*'
   s.subspec 'Core' do |ss|
-    ss.source_files = 'AWBaseSDK/Classes/Core/*'
+    ss.source_files = rootCodeDir + '/Core/*'
   end
+  
+  s.subspec 'General' do |ss|
+
+        ss.subspec 'Base' do |sss|
+            sss.source_files = rootCodeDir + '/General/Base/*'
+        end
+        ss.subspec 'Helper' do |sss|
+            sss.source_files = rootCodeDir + '/General/Helper/*'
+        end
+        ss.subspec 'Marco' do |sss|
+            sss.source_files = rootCodeDir + '/General/Marco/*'
+        end
+        ss.subspec 'Category' do |sss|
+            sss.source_files = rootCodeDir + '/General/Category/*'
+                sss.subspec 'NSDate' do |ssss|
+                    ssss.source_files = rootCodeDir + '/General/Category/NSDate/*'
+                end
+        end
+  end
+  
+  s.subspec 'Model' do |ss|
+      ss.source_files = rootCodeDir + '/Model/*'
+  end
+  
+  s.subspec 'Vendors' do |ss|
+      ss.subspec 'AvoidCrash' do |sss|
+          sss.source_files = rootCodeDir + '/Vendors/AvoidCrash/**/*'
+          
+          sss.subspec 'no-arc' do |mrc|
+              mrc.source_files = rootCodeDir + '/Vendors/AvoidCrash/NSMutableArray+AvoidCrash.m'
+              mrc.requires_arc = false
+          end
+      end
+      ss.subspec 'MBProgressHUD' do |sss|
+          sss.source_files = rootCodeDir + '/Vendors/MBProgressHUD/*'
+          sss.resource_bundles = {
+              'MBProgressHUD' => [rootCodeDir + '/Vendors/MBProgressHUD/*.bundle']
+          }
+      end
+      ss.subspec 'QMUIKit_Lite' do |sss|
+          sss.source_files = rootCodeDir + '/Vendors/QMUIKit_Lite/**/*'
+      end
+      ss.subspec 'Reachability' do |sss|
+          sss.source_files = rootCodeDir + '/Vendors/Reachability/**/*'
+      end
+      
+      ss.subspec 'TOSearchBar' do |sss|
+          sss.source_files = rootCodeDir + '/Vendors/TOSearchBar/*'
+          sss.resource_bundles = {
+              'TOSearchBar' => [rootCodeDir + '/Vendors/TOSearchBar/*.lproj/*']
+          }
+      end
+      ss.subspec 'XCFileManager' do |sss|
+          sss.source_files = rootCodeDir + '/Vendors/XCFileManager/**/*'
+      end
+      ss.subspec 'YYKit' do |sss|
+          sss.source_files = rootCodeDir + '/Vendors/YYKit/**/*'
+      end
+     
+  end
+  
+  
+  
+  
+  
   
   # s.resource_bundles = {
   #   'AWBaseSDK' => ['AWBaseSDK/Assets/*.png']
@@ -44,4 +127,12 @@ TODO: Add long description of the pod here.
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'AFNetworking'
   s.dependency 'XMNetworking'
+  s.dependency 'GYIntroductionView'
+  s.dependency 'IQKeyboardManager'
+  s.dependency 'Masonry'
+  s.dependency 'MJExtension'
+  s.dependency 'MJRefresh'
+  s.dependency 'RJBadgeKit'
+  s.dependency 'RTRootNavigationController'
+  s.dependency 'SDWebImage'
 end
