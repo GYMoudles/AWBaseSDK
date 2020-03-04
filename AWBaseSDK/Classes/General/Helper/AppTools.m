@@ -71,13 +71,13 @@ singleton_implementation(AppTools);
 //        lastIntrolVersion = [kAppVersion copy];
 //        [kUserDefaults setObject:lastIntrolVersion forKey:kLastShowIntrolductionVersionKey];
 //        [kUserDefaults synchronize];
-//        
-//        
+//
+//
 //        if (![lastIntrolVersion isEqualToString:kAppVersion]) {
 //            // 引导页结束后， 同步当前版本号到kLastShowIntrolductionVersionKey
 //            [[AppTools sharedAppTools] showIntrolductionPages];
 //        }
-//        
+//
 //    }else
 //    {
 //        // 引导页结束后， 同步当前版本号到kLastShowIntrolductionVersionKey
@@ -103,8 +103,11 @@ singleton_implementation(AppTools);
     UIViewController *parentVC = _tabBarController;
     if (parentVC.presentedViewController) parentVC = parentVC.presentedViewController;
     
+    parentVC.modalPresentationStyle = UIModalPresentationFullScreen;
+    
     if (!didCacheUserInfo) {
         // 没有获取本地存储的 用户id 用户token
+//        self.loginNav.modalPresentationStyle = UIModalPresentationFullScreen;
         [parentVC presentViewController:self.loginNav animated:animated completion:nil];
     }
     return !didCacheUserInfo;
