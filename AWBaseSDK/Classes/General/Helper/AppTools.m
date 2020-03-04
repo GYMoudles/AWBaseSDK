@@ -103,11 +103,11 @@ singleton_implementation(AppTools);
     UIViewController *parentVC = _tabBarController;
     if (parentVC.presentedViewController) parentVC = parentVC.presentedViewController;
     
-    parentVC.modalPresentationStyle = UIModalPresentationFullScreen;
+//    parentVC.modalPresentationStyle = UIModalPresentationFullScreen;
     
     if (!didCacheUserInfo) {
         // 没有获取本地存储的 用户id 用户token
-//        self.loginNav.modalPresentationStyle = UIModalPresentationFullScreen;
+        self.loginNav.modalPresentationStyle = UIModalPresentationFullScreen;
         [parentVC presentViewController:self.loginNav animated:animated completion:nil];
     }
     return !didCacheUserInfo;
