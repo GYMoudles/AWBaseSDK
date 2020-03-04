@@ -13,6 +13,7 @@
 @class PopOverVieConfiguration, BaseResonseModel;
 
 typedef void(^GetCacheSizeComplete)(NSUInteger size);
+typedef void(^EmptyBlock)(void);
 
 @interface AppTools : NSObject
 singleton_interface(AppTools);
@@ -53,7 +54,7 @@ singleton_interface(AppTools);
 
 // 缓存相关 单位：byte
 + (void)getAllCacheSize:(GetCacheSizeComplete)block;
-+ (void)clearAllCache:(void(^)())completion;
++ (void)clearAllCache:(EmptyBlock)completion;
 
 // 获取网络类型
 + (NSString *)getNetconnTypeIsDetail:(BOOL)detail;

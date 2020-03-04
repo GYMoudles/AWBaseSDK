@@ -196,7 +196,7 @@ singleton_implementation(AppTools);
 - (AWRootNavigationController *)loginNav
 {
     if (nil == _loginNav) {
-        UIViewController *loginVC = [[CTMediator sharedInstance] awPerformTarget:@"YCLogin" action:@"new" params:nil shouldCacheTarget:NO];
+        UIViewController *loginVC = [[CTMediator sharedInstance] awPerformTarget:@"YCLoginViewController" action:@"new" params:nil shouldCacheTarget:NO];
         _loginNav = [[AWRootNavigationController alloc]initWithRootViewController:loginVC];
         loginVC.navigationController.navigationBarHidden = YES;
         
@@ -266,7 +266,7 @@ singleton_implementation(AppTools);
     
 }
 
-+ (void)clearAllCache:(void(^)())completion
++ (void)clearAllCache:(EmptyBlock)completion
 {
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         
