@@ -1,11 +1,11 @@
 //
-//  NSBundle+AWBase.m
+//  Assets+AWBase.m
 //  Pods
 //
 //  Created by zgy on 2020/3/4.
 //
 
-#import "NSBundle+AWBase.h"
+#import "AssetsHelper.h"
 
 @implementation NSBundle (AWBase)
 
@@ -23,5 +23,17 @@
     }
     return mainBundle;
 }
+
+@end
+
+
+@implementation UIImage (AWBase)
+
++ (UIImage *)awImageName:(NSString *)imageName forClass:(Class)cls bundleName:(NSString *)bundleName
+{
+    NSBundle *bundle = [NSBundle awBundleForClass:cls bundleName:bundleName];
+    return [UIImage imageNamed:imageName inBundle:bundle compatibleWithTraitCollection:nil];
+}
+
 
 @end

@@ -1,5 +1,5 @@
 //
-//  NSBundle+AWBase.h
+//  Assets+AWBase.h
 //  Pods
 //
 //  Created by zgy on 2020/3/4.
@@ -15,5 +15,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @end
+
+
+@interface UIImage (AWBase)
+
++ (UIImage *)awImageName:(NSString *)imageName forClass:(Class)cls bundleName:(NSString *)bundleName;
+
+
+@end
+
+
+
 
 NS_ASSUME_NONNULL_END
