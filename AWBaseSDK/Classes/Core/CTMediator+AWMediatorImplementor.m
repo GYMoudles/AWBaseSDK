@@ -16,7 +16,9 @@
         return vc;
     }else {
         NSLog(@"未找到对应VC，可以显示404");
-        return [UIViewController new];
+        AWBaseViewController *vc = [AWBaseViewController new];
+        vc.title = @"未匹配的页面";
+        return vc;
     }
     
 }

@@ -11,7 +11,7 @@
  
  */
 #import "AWBaseViewController.h"
-
+#import "UIImage+JKColor.h"
 
 
 #define kAWNavBackImgName @"navigationbar_back"
@@ -29,12 +29,15 @@
     UINavigationBar *navBar = self.navigationController.navigationBar;
     
     // 这里定制统一的导航样式
-    NSDictionary *dict = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    NSDictionary *dict = @{NSForegroundColorAttributeName : [UIColor blackColor]};
    
-    navBar.barTintColor = [UIColor redColor];
-    navBar.tintColor = [UIColor whiteColor];
+    navBar.barTintColor = [UIColor whiteColor];
+    navBar.tintColor = [UIColor blackColor];
     navBar.translucent = YES;
     [navBar setTitleTextAttributes:dict];
+    
+    // 改变导航栏细线颜色
+    navBar.shadowImage = [UIImage jk_imageWithColor:kColorWithHex(0xE8E7E7)];
     
 }
 
