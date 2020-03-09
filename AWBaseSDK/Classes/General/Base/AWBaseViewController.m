@@ -50,7 +50,8 @@
 //                                           target:target
 //                                           action:action];
     
-    UIBarButtonItem *barBtnItem = [[UIBarButtonItem alloc] initWithImage:kImageNamed(kAWNavBackImgName) style:UIBarButtonItemStylePlain target:target action:action];
+    UIImage *backImg = [UIImage awImageName:kAWNavBackImgName forClass:[self class] bundleName:kAWBaseSDKBundleName];
+    UIBarButtonItem *barBtnItem = [[UIBarButtonItem alloc] initWithImage:backImg style:UIBarButtonItemStylePlain target:target action:action];
     
     return barBtnItem;
 }
