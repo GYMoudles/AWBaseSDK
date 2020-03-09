@@ -149,7 +149,7 @@ shouldPrevent = NO; \
 #import <MJRefresh/MJRefresh.h>
 #import <MJExtension/MJExtension.h>
 #import <XMNetworking/XMNetworking.h>
-
+#import <FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h>
 
 #import "UIView+Extension.h"
 #import "MBProgressHUD+MJ.h"
