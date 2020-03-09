@@ -132,4 +132,39 @@
     return self.layer.borderWidth;
 }
 
+
+- (void)setCorners:(UIRectCorner)corners radius:(CGFloat)radi
+{
+    if (@available(iOS 11.0, *)) {
+        CACornerMask _coner = 0;
+        if (corners & UIRectCornerTopLeft) {
+            _coner = (_coner | kCALayerMinXMinYCorner);
+        }
+        
+        if (corners & UIRectCornerTopRight) {
+            _coner = (_coner | kCALayerMaxXMinYCorner);
+        }
+        
+        if (corners & UIRectCornerBottomLeft) {
+            _coner = (_coner | kCALayerMinXMaxYCorner);
+        }
+        
+        if (corners & UIRectCornerBottomRight) {
+            _coner = (_coner | kCALayerMaxXMaxYCorner);
+        }
+        
+        self.layer.cornerRadius = radi;
+        self.layer.maskedCorners = _coner;
+        
+    } else {
+        // 必须确定bounds之后调用
+        UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corners cornerRadii:CGSizeMake(radi, radi)];
+        CAShapeLayer *mask = [CAShapeLayer layer];
+        mask.frame = self.bounds;
+        mask.path = path.CGPath;
+        self.layer.mask = mask;
+    }
+    
+}
+
 @end
