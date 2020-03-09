@@ -35,6 +35,7 @@ AwesomTemplate 模板项目 为了支持模块化，做成Base模块
    #ifdef __OBJC__
    #import <UIKit/UIKit.h>
    #import "CommonHeader.h"
+   #define kAWBaseSDKBundleName @"AWBaseSDK"
    #else
    #ifndef FOUNDATION_EXPORT
    #if defined(__cplusplus)
@@ -122,9 +123,9 @@ AwesomTemplate 模板项目 为了支持模块化，做成Base模块
   
   
   
-  # s.resource_bundles = {
-  #   'AWBaseSDK' => ['AWBaseSDK/Assets/*.png']
-  # }
+  s.resource_bundles = {
+    'AWBaseSDK' => ['AWBaseSDK/Assets/*.xcassets']
+  }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'

@@ -22,10 +22,10 @@
     [super viewDidLoad];
    
     UIViewController *vc0 = [[CTMediator sharedInstance] awPerformTarget:@"1" action:@"" params:nil shouldCacheTarget:NO];
-    [self addChildVc:vc0 title:@"驾驶舱" image:@"tabbar_0" selectedImage:@"tabbar_0hl"];
+    [self addChildVc:vc0 title:@"通讯录" image:@"tabbar_0" selectedImage:@"tabbar_0hl"];
     
     UIViewController *vc1 = [[CTMediator sharedInstance] awPerformTarget:@"1" action:@"" params:nil shouldCacheTarget:NO];
-    [self addChildVc:vc1 title:@"指标池" image:@"tabbar_1" selectedImage:@"tabbar_1hl"];
+    [self addChildVc:vc1 title:@"发现" image:@"tabbar_1" selectedImage:@"tabbar_1hl"];
     
     UIViewController *vc2 = [[CTMediator sharedInstance] awPerformTarget:@"1" action:@"" params:nil shouldCacheTarget:NO];
     [self addChildVc:vc2 title:@"我的" image:@"tabbar_2" selectedImage:@"tabbar_2hl"];
@@ -40,9 +40,9 @@
     //    [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0, -2)];
     
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [[AppTools sharedAppTools] forceLoginIfNeeded:NO];
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [[AppTools sharedAppTools] forceLoginIfNeeded:NO];
+//    });
 }
 
 
@@ -88,11 +88,11 @@
     childVc.title = title; // 同时设置tabbar和navigationBar的文字
     
     // 设置子控制器的图片
-    childVc.tabBarItem.image = [UIImage imageNamed:image];
+    childVc.tabBarItem.image = [UIImage awImageName:image forClass:[self class] bundleName:kAWBaseSDKBundleName];
     if (kSystemVersion >= 7.0) {
-        childVc.tabBarItem.selectedImage = [[UIImage imageNamed:selectedImage] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+        childVc.tabBarItem.selectedImage = [[UIImage awImageName:selectedImage forClass:[self class] bundleName:kAWBaseSDKBundleName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     } else {
-        childVc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
+        childVc.tabBarItem.selectedImage = [UIImage awImageName:image forClass:[self class] bundleName:kAWBaseSDKBundleName];
     }
     
     // 设置文字的样式

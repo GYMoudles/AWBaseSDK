@@ -272,7 +272,6 @@ DEPENDENCIES:
   - Expecta
   - "Expecta+Snapshots"
   - FBSnapshotTestCase
-  - GYIntroductionView
   - Specta
 
 SPEC REPOS:
@@ -298,7 +297,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  AWBaseSDK: b5ec495aa3bbf257c32da0937edfe608d2809cfb
+  AWBaseSDK: 68818e4866523dc493b3f9d8dc6216ef624d8ac7
   Expecta: 3b6bd90a64b9a1dcb0b70aa0e10a7f8f631667d5
   "Expecta+Snapshots": dcff217eef506dabd6dfdc7864ea2da321fafbb8
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
@@ -313,6 +312,6 @@ SPEC CHECKSUMS:
   Specta: 3e1bd89c3517421982dc4d1c992503e48bd5fe66
   XMNetworking: 7160cc06f504f325eec515a1e687ee1aa89bc462
 
-PODFILE CHECKSUM: 27dd91907b9e179db6bab4a3d475467c2e8ba55d
+PODFILE CHECKSUM: 0c676d27bca7d1570af0eff597fe1296c51e290d
 
 COCOAPODS: 1.9.0
