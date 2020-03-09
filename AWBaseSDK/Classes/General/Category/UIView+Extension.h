@@ -23,5 +23,6 @@
 
 
 - (void)setCorners:(UIRectCorner)corners radius:(CGFloat)radi;
+- (void)setShadow:(UIColor *)color offset:(CGSize)offset opacity:(CGFloat)opacity radius:(CGFloat)radius;
 
 @end
