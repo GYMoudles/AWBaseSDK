@@ -58,6 +58,7 @@ AwesomTemplate 模板项目 为了支持模块化，做成Base模块
 
         ss.subspec 'Base' do |sss|
             sss.source_files = rootCodeDir + '/General/Base/*'
+            sss.exclude_files = rootCodeDir + '/General/Base/AWNavigationController.{h,m}' 
         end
         ss.subspec 'Helper' do |sss|
             sss.source_files = rootCodeDir + '/General/Helper/*'
