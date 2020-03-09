@@ -15,7 +15,7 @@
     if ([vc isKindOfClass:[UIViewController class]]) {
         return vc;
     }else {
-        NSLog(@"未找到对应VC，可以显示404");
+        NSLog(@"404, T:%@, A:%@, P:%@", targetName, actionName, params);
         AWBaseViewController *vc = [AWBaseViewController new];
         vc.title = @"未匹配的页面";
         return vc;
