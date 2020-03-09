@@ -50,7 +50,7 @@
 //                                           target:target
 //                                           action:action];
     
-    UIImage *backImg = [UIImage awImageName:kAWNavBackImgName forClass:[self class] bundleName:kAWBaseSDKBundleName];
+    UIImage *backImg = [UIImage awImageName:kAWNavBackImgName forClass:[AWBaseViewController class] bundleName:kAWBaseSDKBundleName];
     UIBarButtonItem *barBtnItem = [[UIBarButtonItem alloc] initWithImage:backImg style:UIBarButtonItemStylePlain target:target action:action];
     
     return barBtnItem;
