@@ -33,8 +33,8 @@
     // 这里定制统一的导航样式
     NSDictionary *dict = @{NSForegroundColorAttributeName : [UIColor blackColor]};
    
-    navBar.barTintColor = [UIColor whiteColor];
-    navBar.tintColor = [UIColor blackColor];
+    navBar.barTintColor = [UIColor whiteColor]; // 导航栏背景色
+    navBar.tintColor = kColorWithHex(0x7a7472); // 图片渲染颜色
     navBar.translucent = YES;
     [navBar setTitleTextAttributes:dict];
     
