@@ -162,7 +162,7 @@ shouldPrevent = NO; \
 
 
 #import "AWConfigManager.h"
-#import "BaseResonseModel.h"
+#import "BaseResponseModel.h"
 #import "AWBaseViewController.h"
 
 #import "AssetsHelper.h"

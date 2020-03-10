@@ -138,7 +138,7 @@ singleton_implementation(AppTools);
 
 
 // 处理请求通用的情况
-- (void)manageBaseResponseModle:(BaseResonseModel *)model
+- (void)manageBaseResponseModle:(BaseResponseModel *)model
 {
     if ([model.responseCode isEqualToString:kResponseLoginverdueCode]){
         [self userLogoutSucceedWithTip:nil presentLogin:YES];
