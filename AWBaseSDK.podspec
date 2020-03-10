@@ -71,6 +71,10 @@ AwesomTemplate 模板项目 为了支持模块化，做成Base模块
                 sss.subspec 'NSDate' do |ssss|
                     ssss.source_files = rootCodeDir + '/General/Category/NSDate/*'
                 end
+                sss.subspec 'HYBUnicodeReadable' do |ssss|
+                    ssss.source_files = rootCodeDir + '/General/Category/HYBUnicodeReadable/*'
+                    ssss.exclude_files = rootCodeDir + '/General/Category/HYBUnicodeReadable/NSObject+HYBUnicodeReadable.{h,m}'
+                end
         end
   end
   
