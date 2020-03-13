@@ -22,4 +22,16 @@
     }
     
 }
+
+
+- (id)awSafePerformAction:(nullable NSString *)actionName withTarget:(nullable NSObject *)target params:(nullable NSDictionary *)params
+{
+    // generate action
+    NSLog(@"T:%@, A:%@, P:%@", target, actionName, params);
+    NSString *actionString = [NSString stringWithFormat:@"%@:", actionName];
+    SEL action = NSSelectorFromString(actionString);
+    return [self safePerformAction:action target:target params:params];
+}
+
+
 @end

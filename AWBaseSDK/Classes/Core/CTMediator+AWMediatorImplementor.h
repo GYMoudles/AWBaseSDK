@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (UIViewController *)awPerformTarget:(NSString *)targetName action:(NSString * _Nullable)actionName params:(NSDictionary * _Nullable)params shouldCacheTarget:(BOOL)shouldCacheTarget;
 
+- (id)awSafePerformAction:(nullable NSString *)actionName withTarget:(nullable NSObject *)target params:(nullable NSDictionary *)params;
 
 @end
 

@@ -20,4 +20,7 @@ extern NSString * _Nonnull const kCTMediatorParamsKeySwiftTargetModuleName;
 - (id _Nullable )performTarget:(NSString * _Nullable)targetName action:(NSString * _Nullable)actionName params:(NSDictionary * _Nullable)params shouldCacheTarget:(BOOL)shouldCacheTarget;
 - (void)releaseCachedTargetWithTargetName:(NSString *_Nullable)targetName;
 
+
+
+- (id _Nullable)safePerformAction:(SEL _Nullable)action target:(NSObject *_Nullable)target params:(NSDictionary *_Nullable)params;
 @end
