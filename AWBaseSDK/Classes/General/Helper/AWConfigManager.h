@@ -18,8 +18,8 @@ typedef NS_ENUM(NSInteger, XMNetworkErrorCode) {
 
 
 
-//#define kConfigEnv_DEBUG
-#define kConfigEnv_UAT
+#define kConfigEnv_DEBUG
+//#define kConfigEnv_UAT
 //#define kConfigEnv_RELEASE
 
 
