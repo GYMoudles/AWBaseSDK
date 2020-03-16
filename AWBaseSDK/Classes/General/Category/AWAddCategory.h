@@ -9,8 +9,8 @@
 
 @interface UIImage (AWAdd)
 
-
-- (UIImage *)generateQRCodeWithString:(NSString *)string Size:(CGFloat)size;
+/// 生成二维码
++ (UIImage *)generateQRCodeWithString:(NSString *)string Size:(CGFloat)size;
 
 
 @end
