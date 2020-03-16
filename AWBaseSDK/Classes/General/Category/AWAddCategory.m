@@ -11,7 +11,7 @@
 @implementation UIImage (AWAdd)
 
 // 生成二维码
-+ (UIImage *)generateQRCodeWithString:(NSString *)string Size:(CGFloat)size
++ (UIImage *)generateQRCodeWithString:(NSString *)string size:(CGFloat)size
 {
     // 创建过滤器
     CIFilter *filter = [CIFilter filterWithName:@"CIQRCodeGenerator"];
@@ -22,12 +22,12 @@
     [filter setValue:data forKey:@"inputMessage"];
     // 获取二维码过滤器生成二维码
     CIImage *image = [filter outputImage];
-    UIImage *img = [self createNonInterpolatedUIImageFromCIImage:image WithSize:size];
+    UIImage *img = [self createNonInterpolatedUIImageFromCIImage:image withSize:size];
     return img;
 }
 
 // 二维码清晰
-+ (UIImage *)createNonInterpolatedUIImageFromCIImage:(CIImage *)image WithSize:(CGFloat)size
++ (UIImage *)createNonInterpolatedUIImageFromCIImage:(CIImage *)image withSize:(CGFloat)size
 {
     CGRect extent = CGRectIntegral(image.extent);
     CGFloat scale = MIN(size/CGRectGetWidth(extent), size/CGRectGetHeight(extent));
