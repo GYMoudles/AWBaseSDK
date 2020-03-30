@@ -13,14 +13,20 @@
 
 
 @interface AWTabBarController ()<UITabBarControllerDelegate>
-
+{
+    UIColor *_normalTextColor;
+    UIColor *_selectedTextColor;
+}
 @end
 
 @implementation AWTabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-   
+    _normalTextColor = kRGBColor(123, 123, 123);
+    _selectedTextColor = kColorWithHex(0x26ab28);
+    
+    
     UIViewController *vc0 = [[CTMediator sharedInstance] awPerformTarget:@"1" action:@"" params:nil shouldCacheTarget:NO];
     [self addChildVc:vc0 title:@"通讯录" image:@"tabbar_0" selectedImage:@"tabbar_0hl"];
     
@@ -32,6 +38,12 @@
     
     
     self.delegate = self;
+    
+    UITabBar.appearance.tintColor = _selectedTextColor;
+    if (@available(iOS 10.0, *)) {
+        UITabBar.appearance.unselectedItemTintColor = _normalTextColor;
+    }
+    
     
     // 去掉tabbar上方线
 //    self.tabBar.shadowImage = [UIImage jk_imageWithColor:kColorNaviLineGray];
