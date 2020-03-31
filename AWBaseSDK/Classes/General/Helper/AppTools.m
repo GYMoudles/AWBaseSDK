@@ -131,7 +131,7 @@ static AppTools *_instance;
     
 //    parentVC.modalPresentationStyle = UIModalPresentationFullScreen;
     
-    if (!didCacheUserInfo) {
+    if (!didCacheUserInfo && !_didPresentLoginPage) {
         _didPresentLoginPage = YES;
         
         // 没有获取本地存储的 用户id 用户token
@@ -144,13 +144,12 @@ static AppTools *_instance;
 - (void)dismissLoginVC
 {
     if (_didPresentLoginPage) {
-        [self.loginNav dismissViewControllerAnimated:YES completion:nil];
-        _didPresentLoginPage = NO;
-        
+        [self.loginNav dismissViewControllerAnimated:YES completion:nil];        
     }else {
         kAppDelegate.window.rootViewController = self.tabBarController;
     }
     self.loginNav = nil;
+    _didPresentLoginPage = NO;
 }
 
 
