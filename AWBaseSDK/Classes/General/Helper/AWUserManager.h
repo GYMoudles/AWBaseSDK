@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 //#import "LoginData.h"
+#import "Singleton.h"
+
 
 @interface AWUserManager : NSObject
 singleton_interface(AWUserManager);

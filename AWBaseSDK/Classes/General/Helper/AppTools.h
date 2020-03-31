@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "Singleton.h"
+
 
 @class CPShowStyle, BaseResponseModel;
 
@@ -16,10 +16,11 @@ typedef void(^GetCacheSizeComplete)(NSUInteger size);
 typedef void(^EmptyBlock)(void);
 
 @interface AppTools : NSObject
-singleton_interface(AppTools);
 
++ (instancetype)sharedTools;
 
-- (void)startApp;
+- (void)startAppWithLoginPage:(BOOL)flag;
+
 
 - (void)afterLoginSucceed;
  
@@ -30,7 +31,7 @@ singleton_interface(AppTools);
  @param animated 弹出登录页面是否需要动画
  @return 是否需要强制登录
  */
-- (BOOL)forceLoginIfNeeded:(BOOL)animated;
+- (BOOL)forceLoginAnimated:(BOOL)animated;
 
 - (void)dismissLoginVC;
 
