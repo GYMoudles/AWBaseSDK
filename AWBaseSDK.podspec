@@ -129,7 +129,7 @@ AwesomTemplate 模板项目 为了支持模块化，做成Base模块
   
   
   s.resource_bundles = {
-    'AWBaseSDK' => ['AWBaseSDK/Assets/*.xcassets']
+    'AWBaseSDK' => ['AWBaseSDK/Assets/*.xcassets', rootCodeDir + '/**/*.xib']
   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'

@@ -25,4 +25,8 @@
 - (void)setCorners:(UIRectCorner)corners radius:(CGFloat)radi;
 - (void)setShadow:(UIColor *)color offset:(CGSize)offset opacity:(CGFloat)opacity radius:(CGFloat)radius;
 
+
+// emptyView为nil时，默认为AWEmptyView
+- (void)showEmptyView:(UIView *)emptyView;
+
 @end

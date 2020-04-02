@@ -5,7 +5,10 @@
 //
 
 #import "UIView+Extension.h"
+#import "AWEmptyView.h"
 
+
+static int __emptyViewTag = 2783210;
 @implementation UIView (Extension)
 
 - (void)setX:(CGFloat)x
@@ -132,7 +135,6 @@
     return self.layer.borderWidth;
 }
 
-
 - (void)setCorners:(UIRectCorner)corners radius:(CGFloat)radi
 {
     if (@available(iOS 11.0, *)) {
@@ -157,7 +159,6 @@
         self.layer.maskedCorners = _coner;
         
     } else {
-        // 必须确定bounds之后调用
         UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds byRoundingCorners:corners cornerRadii:CGSizeMake(radi, radi)];
         CAShapeLayer *mask = [CAShapeLayer layer];
         mask.frame = self.bounds;
@@ -166,6 +167,7 @@
     }
     
 }
+
 
 - (void)setShadow:(UIColor *)color offset:(CGSize)offset opacity:(CGFloat)opacity radius:(CGFloat)radius
 {
@@ -176,6 +178,24 @@
     self.layer.shadowOpacity = opacity;
     self.layer.shadowRadius = radius;
     self.layer.shadowPath = shadowPath.CGPath;
+}
+
+
+- (void)showEmptyView:(UIView *)emptyView
+{
+    if ([self viewWithTag:__emptyViewTag]){
+        return;
+    }
+    
+    UIView *ep = emptyView;
+    if (nil == ep) {
+        ep = [AWEmptyView emptyViewView];
+    }
+    ep.tag = __emptyViewTag;
+    [self addSubview:ep];
+    [ep mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.mas_equalTo(0);
+    }];
 }
 
 @end
