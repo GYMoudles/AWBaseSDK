@@ -124,7 +124,7 @@
     if (kSystemVersion >= 7.0) {
         childVc.tabBarItem.selectedImage = [[UIImage awImageName:selectedImage forClass:[self class] bundleName:kAWBaseSDKBundleName] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     } else {
-        childVc.tabBarItem.selectedImage = [UIImage awImageName:image forClass:[self class] bundleName:kAWBaseSDKBundleName];
+        childVc.tabBarItem.selectedImage = [UIImage awImageName:selectedImage forClass:[self class] bundleName:kAWBaseSDKBundleName];
     }
     
     // 设置文字的样式
