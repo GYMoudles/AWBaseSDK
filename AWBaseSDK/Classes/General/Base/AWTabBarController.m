@@ -32,7 +32,7 @@
     
     UIViewController *vc1 = [[CTMediator sharedInstance] awPerformTarget:@"1" action:@"" params:nil shouldCacheTarget:NO];
     [self addChildVc:vc1 title:@"发现" image:@"tabbar_1" selectedImage:@"tabbar_1hl"];
-    [vc1.view showEmptyView:nil];
+    [vc1.view showEmptyView];
     
     UIViewController *vc2 = [[CTMediator sharedInstance] awPerformTarget:@"1" action:@"" params:nil shouldCacheTarget:NO];
     [self addChildVc:vc2 title:@"我的" image:@"tabbar_2" selectedImage:@"tabbar_2hl"];
