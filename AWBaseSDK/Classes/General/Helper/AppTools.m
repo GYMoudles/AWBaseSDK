@@ -198,6 +198,11 @@ static AppTools *_instance;
     [self.tabBarController setSelectedIndex:index];
 }
 
+- (void)modifyTabBarHidden:(BOOL)hidden
+{
+    [self.tabBarController modifyTabBarHidden:hidden];
+}
+
 
 // 显示引导页
 - (void)showIntrolductionPages;

@@ -10,6 +10,8 @@
 
 @interface AWTabBarController : UITabBarController
 
+- (void)modifyTabBarHidden:(BOOL)hidden;
 
 - (void)resetChildViewControllers;
+
 @end
