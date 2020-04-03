@@ -23,19 +23,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupChildViewControllers];
+    
+}
+
+- (void)setupChildViewControllers
+{
     _normalTextColor = kRGBColor(123, 123, 123);
     _selectedTextColor = kColorWithHex(0x26ab28);
     
     
-    UIViewController *vc0 = [[CTMediator sharedInstance] awPerformTarget:@"1" action:@"" params:nil shouldCacheTarget:NO];
-    [self addChildVc:vc0 title:@"通讯录" image:@"tabbar_0" selectedImage:@"tabbar_0hl"];
+    UIViewController *vc0 = [AWBaseViewController new];
+    [self setupChildVc:vc0 title:@"通讯录" image:@"tabbar_0" selectedImage:@"tabbar_0hl"];
     
     UIViewController *vc1 = [[CTMediator sharedInstance] awPerformTarget:@"1" action:@"" params:nil shouldCacheTarget:NO];
-    [self addChildVc:vc1 title:@"发现" image:@"tabbar_1" selectedImage:@"tabbar_1hl"];
+    [self setupChildVc:vc1 title:@"发现" image:@"tabbar_1" selectedImage:@"tabbar_1hl"];
     [vc1.view showEmptyView];
     
     UIViewController *vc2 = [[CTMediator sharedInstance] awPerformTarget:@"1" action:@"" params:nil shouldCacheTarget:NO];
-    [self addChildVc:vc2 title:@"我的" image:@"tabbar_2" selectedImage:@"tabbar_2hl"];
+    [self setupChildVc:vc2 title:@"我的" image:@"tabbar_2" selectedImage:@"tabbar_2hl"];
+    
+    NSArray *temp = @[vc0, vc1, vc2];
+    
+    
+    NSMutableArray *navArr = @[].mutableCopy;
+    for (UIViewController *v in temp) {
+        AWRootNavigationController *nav = [[AWRootNavigationController alloc] initWithRootViewController:v];
+        [navArr addObject:nav];
+    }
+    
+    [self setViewControllers:navArr animated:NO];
+    
     
     
     self.delegate = self;
@@ -47,21 +65,26 @@
     
     
     // 去掉tabbar上方线
-//    self.tabBar.shadowImage = [UIImage jk_imageWithColor:kColorNaviLineGray];
-//    self.tabBar.backgroundImage = [UIImage jk_imageWithColor:[UIColor whiteColor]];
+    //    self.tabBar.shadowImage = [UIImage jk_imageWithColor:kColorNaviLineGray];
+    //    self.tabBar.backgroundImage = [UIImage jk_imageWithColor:[UIColor whiteColor]];
     
     //    [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0, -2)];
-    
+}
+
+- (void)resetChildViewControllers
+{
+    [self setViewControllers:nil animated:NO];
+    [self setupChildViewControllers];
 }
 
 
 - (void)setSelectedIndex:(NSUInteger)selectedIndex
 {
     BOOL flag = YES;
-//    if (selectedIndex == 1 || selectedIndex == 2 || selectedIndex == 4) {
-//        flag = [[AWUserManager sharedAWUserManager] isUserLogined];
-//        [[AppTools sharedTools] forceLoginAnimated:YES];
-//    }
+    //    if (selectedIndex == 1 || selectedIndex == 2 || selectedIndex == 4) {
+    //        flag = [[AWUserManager sharedAWUserManager] isUserLogined];
+    //        [[AppTools sharedTools] forceLoginAnimated:YES];
+    //    }
     
     if (flag) {
         [super setSelectedIndex:selectedIndex];
@@ -73,25 +96,25 @@
 {
 //    NSUInteger index = [tabBarController.viewControllers indexOfObject:viewController];
     BOOL flag = YES;
-//    if (index == 1 || index == 2 || index == 4) {
-//        flag = [[AWUserManager sharedAWUserManager] isUserLogined];
-//        [[AppTools sharedTools] forceLoginAnimated:YES];
-//    }
+    //    if (index == 1 || index == 2 || index == 4) {
+    //        flag = [[AWUserManager sharedAWUserManager] isUserLogined];
+    //        [[AppTools sharedTools] forceLoginAnimated:YES];
+    //    }
+
     
-    
-//    UIViewController *thirdVC = [tabBarController.viewControllers objectAtIndex:2];
-//    if (viewController == thirdVC) {
-//        PublishViewController *vc = [PublishViewController new];
-//        AWNavigationController *nav = [[AWNavigationController alloc] initWithRootViewController:vc];
-//        [self presentViewController:nav animated:YES completion:nil];
-//        return NO;
-//    }
+    //    UIViewController *thirdVC = [tabBarController.viewControllers objectAtIndex:2];
+    //    if (viewController == thirdVC) {
+    //        PublishViewController *vc = [PublishViewController new];
+    //        AWNavigationController *nav = [[AWNavigationController alloc] initWithRootViewController:vc];
+    //        [self presentViewController:nav animated:YES completion:nil];
+    //        return NO;
+    //    }
     return flag;
 }
 
 
 #pragma mark- Helper
-- (void)addChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
+- (void)setupChildVc:(UIViewController *)childVc title:(NSString *)title image:(NSString *)image selectedImage:(NSString *)selectedImage
 {
     // 设置子控制器的文字
     childVc.title = title; // 同时设置tabbar和navigationBar的文字
@@ -112,10 +135,6 @@
     [childVc.tabBarItem setTitleTextAttributes:textAttrs forState:UIControlStateNormal];
     [childVc.tabBarItem setTitleTextAttributes:selectTextAttrs forState:UIControlStateSelected];
     
-    // 先给外面传进来的小控制器 包装 一个导航控制器
-    AWRootNavigationController *nav = [[AWRootNavigationController alloc] initWithRootViewController:childVc];
-    // 添加为子控制器
-    [self addChildViewController:nav];
 }
 
 @end

@@ -10,4 +10,6 @@
 
 @interface AWTabBarController : UITabBarController
 
+
+- (void)resetChildViewControllers;
 @end

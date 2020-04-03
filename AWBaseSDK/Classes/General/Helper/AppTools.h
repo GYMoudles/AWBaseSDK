@@ -17,6 +17,8 @@ typedef void(^EmptyBlock)(void);
 
 @interface AppTools : NSObject
 
+@property (nonatomic, assign) BOOL resetTabbarChildVCs;
+
 + (instancetype)sharedTools;
 
 - (void)startAppWithLoginPage:(BOOL)flag;

@@ -116,12 +116,19 @@ static AppTools *_instance;
     // 保存用户id  token等
     [[AWUserManager sharedAWUserManager] saveUserInfo];
     
+    if (_resetTabbarChildVCs) {
+        [self.tabBarController resetChildViewControllers];
+    }
+    
     [self dismissLoginVC];
 }
 
 
 - (BOOL)forceLoginAnimated:(BOOL)animated
 {
+    
+//    _resetTabbarChildVCs = YES;
+    
     // 获取用户信息的标记
     BOOL didCacheUserInfo = [[AWUserManager sharedAWUserManager] isUserLogined];
     UIViewController *parentVC = self.tabBarController;
@@ -129,7 +136,6 @@ static AppTools *_instance;
         parentVC = parentVC.presentedViewController;
     }
     
-//    parentVC.modalPresentationStyle = UIModalPresentationFullScreen;
     
     if (!didCacheUserInfo && !_didPresentLoginPage) {
         _didPresentLoginPage = YES;
@@ -233,6 +239,7 @@ static AppTools *_instance;
 {
     if (nil == _loginNav) {
         UIViewController *loginVC = [[CTMediator sharedInstance] awPerformTarget:@"YCLoginViewController" action:@"targetVC" params:nil shouldCacheTarget:NO];
+//        AWBaseViewController *loginVC = [AWBaseViewController new];
         _loginNav = [[AWRootNavigationController alloc]initWithRootViewController:loginVC];
 //        loginVC.navigationController.navigationBarHidden = YES;
         
