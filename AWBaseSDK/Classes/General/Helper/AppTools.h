@@ -18,6 +18,10 @@ typedef void(^EmptyBlock)(void);
 @interface AppTools : NSObject
 
 @property (nonatomic, assign) BOOL resetTabbarChildVCs;
+@property (nonatomic,   copy) EmptyBlock loginSucceedBlock;
+@property (nonatomic,   copy) EmptyBlock logoutSucceedBlock;
+
+
 
 + (instancetype)sharedTools;
 
@@ -37,7 +41,11 @@ typedef void(^EmptyBlock)(void);
 
 - (void)dismissLoginVC;
 
-- (void)userLogoutSucceedWithTip:(NSString *)showTip presentLogin:(BOOL)login;
+/// 退出登录
+/// @param showTip 展示的提示
+/// @param clearAll 是否清楚所有用户相关的信息，NO表示只清除内存中（适合有其他较安全的登录方式，比如 生物识别）
+/// @param login 是否弹登录页
+- (void)userLogoutSucceedWithTip:(NSString *)showTip clearAll:(BOOL)clearAll presentLogin:(BOOL)login;
 
 
 // 处理请求通用的情况
